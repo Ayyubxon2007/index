@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="spinner"></div>
+    <style>
+        body{
+            background-color: #212121;
+        }
+        .spinner {
+            position: relative;
+            left: 48%;
+            top: 480px;
+            width: 126px;
+ height: 126px; 
+ display: grid;
+ border: 4px solid #0000;
+ border-radius: 50%;
+ border-right-color: #004dff;
+ animation: spinner 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+ content: "";
+ grid-area: 1/1;
+ margin: 2px;
+ border: inherit;
+ border-radius: 50%;
+ animation: spinner 2s infinite;
+}
+
+.spinner::after {
+ margin: 8px;
+ animation-duration: 3s;
+}
+
+@keyframes spinner {
+ 100% {
+  transform: rotate(1turn);
+ }
+}
+    </style>
+</body>
+</html>
